@@ -7,11 +7,13 @@ namespace Calculating
 {
     public static class Calculate
     {
+        // Проверка, является ли треугольником фигура с введенными значениями сторон
         public static bool IsTriangle(double x, double y, double z)
         {
             return ((x + y) > z && (x + z) > y && (y + z) > x);
         }
 
+        // Проверка, является ли треугольник прямоугольным
         public static bool IsRectangular(double a, double b, double c)
         {
             if (a <= 0 || b <= 0 || c <= 0) return false;
@@ -24,6 +26,7 @@ namespace Calculating
             return false;
         }
 
+        // Вычисление площади треугольника по трем\четырехугольника по четырем сторонам
         public static double Triangle(double a, double b, double c, double d = 0)
         {
             if (a <= 0 || b <= 0 || c <= 0 || d < 0) return 0;
@@ -31,6 +34,7 @@ namespace Calculating
             return Math.Sqrt((pp - a) * (pp - b) * (pp - c) * (pp - d));
         }
 
+        // Вычисление площади круга по радиусу
         public static double Circle(double a)
         {
             if (a <= 0) return 0;

@@ -32,12 +32,14 @@ namespace TestDll
 
         }
 
+        // Вычисляем площадь круга по радиусу
         private void btnCircle_Click(object sender, RoutedEventArgs e)
         {
             circleRes.Text = "0";
             if (parse(radius)) circleRes.Text = Calculate.Circle(a).ToString();
         }
 
+        // Вычисляем площадь треугольника по трем сторонам
         private void btnTri_Click(object sender, RoutedEventArgs e)
         {
             triRes.Text = "0";
@@ -49,12 +51,14 @@ namespace TestDll
             }
         }
 
+        // Вычисляем площадь четырехугольника по четырем сторонам
         private void btnRect_Click(object sender, RoutedEventArgs e)
         {
             rectRes.Text = "0";
             if (parse(sideA1, sideB1, sideC1, sideD1)) rectRes.Text = Calculate.Triangle(a, b, c, d).ToString();
         }
 
+        // Конвертируем в double введенные значения 
         private bool parse(TextBox ta, TextBox tb = null, TextBox tc = null, TextBox td = null)
         {
             try
