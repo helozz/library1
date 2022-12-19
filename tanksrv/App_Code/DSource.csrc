@@ -1,0 +1,230 @@
+using System; 
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Globalization;
+
+namespace TW
+{
+    // NOTE: Adding anything here should also:
+    // 1) init (settings[Def.n] = {n}) for s.ashx able creating Static.txt
+    // 2) reflect enum change to the client
+    // 3) add the corresponding n field to the data base
+    public enum Def
+    {
+        ClanCreatePrice,
+        ClanCreateMinLevel,
+		ClanConvertMoneyToTreasury,
+		ClanConvertGoldToTreasury,
+		ClanChangeFlagPrice,
+		ClanChangeTaxPrice,
+		ClanChangeLogoPrice,		
+		ClanBuySkillLvl1,
+		ClanBuySkillLvl2,
+		ClanBuySkillLvl3,
+		ClanBuySkillLvl4,
+		ClanBuySkillLvl5,
+		ClanChangeOwner,
+        TankRenameCost,
+		ScanRadarCost,
+		FuelPrice,						
+        PVPDailyCount,		
+        QueueGold,
+        QueueCampaign,				
+		BattleMaxAttempts,
+		BattleAttemptsCost,
+		BattleCooldown,
+		BattleCooldownCost,		
+		UserFriendReward,
+		RefreshMarketPrice,
+		FuelPerLvl,
+		RadarScanDelay,
+		MissionEventResurrectTankCost,		
+		ClanMaxPlaceLimit,		
+		ClanTournamentRewardMinPoints,
+        UnitSharingTimeH,
+        UnitSharingCancelTimeH,
+        UnitHireTimeH,
+        UnitHirePriceG,
+        UnitHirePriceMPercent,
+		UnitHireBattles,
+        UnitHireMaxTanks,
+		EventMapOpencCellBonusReputation,
+		EventMapDestroyTargetBonusReputation,
+		EventMapBonusMaxLimit,
+		EventMapBonusPriceGold,
+		EventMapBonusRepairAll,
+		EventFuelPrice,
+        SellTankPrice,
+		GoldPerAd,
+		ArenaDefenceBonusPrice,
+		ArenaAttackBonusPrice,
+		ArenaBonusDuration,   
+		ExchangeComponentPrice,
+		SendGiftMoney,
+        SendGiftParts,
+    }
+
+
+public static class Define
+{
+public static Int32 StaticVersion ={StaticVersion};
+//=========== game options
+public static double InitGold = {InitGold};
+public static double InitMoney = {InitMoney};
+public static double InitParts = {InitParts};
+public static Int32[] InitTank = {{InitTank}};
+public static Int32 InitSlots = {InitSlots};
+public static double GMCourse = {GMCourse}; // Gold - Money exchange course
+public static double GRCourse = {GRCourse};
+public static Int32 GiftPeriod = 3; // Период для премии в золоте 
+public static Int32 InitFriendExperience = {InitFriendExperience}; // Уровень навыков новоиспеченного друга
+public static Int32 AutoGameRating = {AutoGameRating}; // Подбор игроков по рейтингу, +-
+public static Int32 FriendMaxStat = {FriendMaxStat}; // лимит роста стата экипажа
+public static Int32 RemoveDevicePercent = {RemoveDevicePercent}; // стоимость снятия девайса в процентах от стоимости девайса
+public static Int32 MissionsPerDay = {MissionsPerDay};
+public static bool MissionPool = {MissionPool};
+public static double ChangeNamePrice = {ChangeNamePrice};
+public static double FBLinkGold = {FBLinkGold};
+public static double TWLinkGold = {TWLinkGold};
+public static Int32 CampaignCount = {CampaignCount};
+public static double QuestDropPrice = {QuestDropPrice};
+public static double QuestNowPrice = {QuestNowPrice};
+public static double QuestChoosePrice = {QuestChoosePrice};
+public static Int32 QuestWaitingTime = {QuestWaitingTime};
+public static Int32 Quest4GoldPercent = {Quest4GoldPercent};
+public static Int32 SellTank = {SellTank};
+public static Int32 SellDevice = {SellDevice};
+public static Int32 SellCrew = {SellCrew};
+public static Int32 SellShell = {SellShell};
+public static Int32 SellPower = {SellPower};
+public static double[] UpgradeMultiplier = {{UpgradeMultiplier}};
+public static int[] UserTierLevels = {{UserTierLevels}};
+public static int[] BuildingsLimit = {{BuildingsLimit}};
+public static Int32 UpgradeDropPrice = {UpgradeDropPrice};
+public static Int32 TankRestorePrice = {TankRestorePrice};
+public static int[][] Zones = {{Zones}};
+public static Int32 BuildingRemovePrice = {BuildingRemovePrice};
+public static double[] DifficultyMult = {{DifficultyMult}};
+public static double UpperMult = {UpperMult};
+public static double[] RewardMult = {{RewardMult}};
+public static double[] CrewTierExp = {{CrewTierExp}};
+public static int[] CrewEvolvePrices = {{CrewEvolvePrices}};
+public static int[] CrewEnforcePrices = {{CrewEnforcePrices}};
+public static int[] CrewTransferExpMoneyPrices = {{CrewTransferExpMoneyPrices}};
+public static int[] CrewTransferExpGoldPrices = {{CrewTransferExpGoldPrices}};
+public static int[] CrewAdditionalSkills = {{CrewAdditionalSkills}};
+public static int[] ResetPriceTiers = {{ResetPriceTiers}};
+public static double[] ResetPriceMult = {{ResetPriceMult}};
+public static double[] HealWoundPrices = {{HealWoundPrices}};
+public static int BuildingQueue = {BuildingQueue};
+public static int[][] CampaignGraphData = {{CampaignGraphData}};
+public static int[] BeginnerItems = {{BeginnerItems}};
+public static int[] ReqMarketLvl = {{ReqMarketLvl}};
+public static int[] ComponentsCost = {{ComponentsCost}};
+public static int[] EvolveChangeEliteToElite = {{EvolveChangeEliteToElite}};
+public static int[] FuelCost = {{FuelCost}};
+
+public static string TodoRewards = {TodoRewards};
+public static string TodoRewardHints = {TodoRewardHints};
+
+public static string ClanTournamentReward = {ClanTournamentReward};
+public static int[] ClanDonateGoldPacks = {{ClanDonateGoldPacks}};
+public static double[] ClanDonateGoldPacksMult = {{ClanDonateGoldPacksMult}};
+
+public static int[] DailyRewards = {{DailyRewards}};
+public static int[] DailyRewardTimeMs = {{DailyRewardTimeMs}};
+
+public static double[] EventMissionDifficultyMult = {{EventMissionDifficultyMult}};
+public static int[] EventMapResourceRewards = {{EventMapResourceRewards}};
+public static int[] EventMapCompleteFightBonusReputation = {{EventMapCompleteFightBonusReputation}};
+public static int EventMapResetAfterDays = {EventMapResetAfterDays};
+public static string EventRewards = {EventRewards};
+public static int[][] VIPs = {{VIPMatrix}};
+public static double[] EventBuildingRepM = {{EventBuildingRepM}};
+public static string TechTreeLinks = {TechTreeLinks};
+public static string DMRewards = {DMRewards};
+public static string ChatServerUrl = {ChatServerUrl};
+
+    private static readonly Dictionary<Def, double> settings = new Dictionary<Def, double>();
+
+    static Define()
+    {
+        settings[Def.ClanCreatePrice] = {ClanCreatePrice};
+        settings[Def.ClanCreateMinLevel] = {ClanCreateMinLevel};
+        settings[Def.ClanConvertMoneyToTreasury] = {ClanConvertMoneyToTreasury};
+        settings[Def.ClanConvertGoldToTreasury] = {ClanConvertGoldToTreasury};
+        settings[Def.ClanChangeFlagPrice] = {ClanChangeFlagPrice};
+        settings[Def.ClanChangeTaxPrice] = {ClanChangeTaxPrice};
+		settings[Def.ClanChangeLogoPrice] = {ClanChangeLogoPrice};		        
+        settings[Def.ClanBuySkillLvl1] = {ClanBuySkillLvl1};
+        settings[Def.ClanBuySkillLvl2] = {ClanBuySkillLvl2};
+        settings[Def.ClanBuySkillLvl3] = {ClanBuySkillLvl3};
+        settings[Def.ClanBuySkillLvl4] = {ClanBuySkillLvl4};
+        settings[Def.ClanBuySkillLvl5] = {ClanBuySkillLvl5};		
+		settings[Def.ClanChangeOwner] = {ClanChangeOwner};
+        settings[Def.TankRenameCost] = {TankRenameCost};
+		settings[Def.ScanRadarCost] = {ScanRadarCost};
+		settings[Def.FuelPrice] = {FuelPrice};				
+		settings[Def.PVPDailyCount] = {PVPDailyCount};		
+		settings[Def.QueueGold] = {QueueGold};	
+		settings[Def.QueueCampaign] = {QueueCampaign};					
+		settings[Def.BattleMaxAttempts] = {BattleMaxAttempts};			
+		settings[Def.BattleAttemptsCost] = {BattleAttemptsCost};	
+		settings[Def.BattleCooldown] = {BattleCooldown};
+		settings[Def.BattleCooldownCost] = {BattleCooldownCost};		
+		settings[Def.UserFriendReward] = {UserFriendReward};	
+		settings[Def.RefreshMarketPrice] = {RefreshMarketPrice};
+		settings[Def.FuelPerLvl] = {FuelPerLvl};	
+		settings[Def.RadarScanDelay] = {RadarScanDelay};	
+		settings[Def.MissionEventResurrectTankCost] = {MissionEventResurrectTankCost};			
+		settings[Def.ClanMaxPlaceLimit]	= {ClanMaxPlaceLimit};		
+		settings[Def.ClanTournamentRewardMinPoints] = {ClanTournamentRewardMinPoints};
+		settings[Def.UnitSharingTimeH] = {UnitSharingTimeH};
+        settings[Def.UnitSharingCancelTimeH] = {UnitSharingCancelTimeH};
+        settings[Def.UnitHireTimeH] = {UnitHireTimeH};
+        settings[Def.UnitHirePriceG] = {UnitHirePriceG};
+		settings[Def.UnitHirePriceMPercent] = {UnitHirePriceMPercent};
+		settings[Def.UnitHireBattles] = {UnitHireBattles};
+		settings[Def.UnitHireMaxTanks] = {UnitHireMaxTanks};
+		settings[Def.EventMapOpencCellBonusReputation] = {EventMapOpencCellBonusReputation};
+		settings[Def.EventMapDestroyTargetBonusReputation] = {EventMapDestroyTargetBonusReputation};
+		settings[Def.EventMapBonusMaxLimit] = {EventMapBonusMaxLimit};
+		settings[Def.EventMapBonusPriceGold] = {EventMapBonusPriceGold};
+		settings[Def.EventMapBonusRepairAll] = {EventMapBonusRepairAll};
+		settings[Def.EventFuelPrice] = {EventFuelPrice};
+		settings[Def.SellTankPrice] = {SellTankPrice};
+		settings[Def.GoldPerAd] = {GoldPerAd};
+		settings[Def.ArenaDefenceBonusPrice] = {ArenaDefenceBonusPrice};
+		settings[Def.ArenaAttackBonusPrice] = {ArenaAttackBonusPrice};
+		settings[Def.ArenaBonusDuration] = {ArenaBonusDuration};
+		settings[Def.ExchangeComponentPrice] = {ExchangeComponentPrice};
+		settings[Def.SendGiftMoney] = {SendGiftMoney};
+        settings[Def.SendGiftParts] = {SendGiftParts};
+    }
+
+    public static double Get(Def def)
+    {
+        return settings[def];
+    }
+
+    public static string ToJson()
+    {
+        var sb = new StringBuilder(100);
+        sb.Append('[');
+        var i = 0;
+        foreach (var def in Enum.GetValues(typeof(Def)).Cast<Def>())
+        {
+            if (i > 0)
+            {
+                sb.Append(',');
+            }
+            var d = settings[def];
+            sb.Append(d.ToString(CultureInfo.InvariantCulture));
+            i++;
+        }
+        sb.Append(']');
+        return sb.ToString();
+    }
+}
+}

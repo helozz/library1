@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><title></title></head>
+<body>
+<img src = "http://91.237.98.115/logo.png"  height="120"/><br /><br />
+<div style = "border-top:3px solid #a48e12">&nbsp;</div>
+<span style = "font-family:Arial;font-size:12pt">
+<b>Set up a new TankSquad password</b><br /><br />
+<div style = "border-top:3px solid #a48e12">&nbsp;</div>
+
+<form method="post" action="{Link}" onsubmit="return change2();">
+Password: <input type="password" size = 15  name="pwd1" id="pwd1" onkeyup="change();"/>&nbsp;&nbsp;<span id="level"></span><br /><br />
+Confirm:&nbsp;&nbsp;&nbsp;&nbsp; <input type="password" size = 15   name="pwd2"  id="pwd2"  onkeyup="change2();" />&nbsp;&nbsp;<span id="match"></span><br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="Submit" value="Set password" onclick="change2();" />
+</form>
+
+</span>
+
+<script type="text/javascript">
+function change()
+{
+var pass = document.getElementById("pwd1").value;
+if(pass.length >= 6 && pass != pass.toLowerCase() && isNaN(pass)) {
+document.getElementById("level").innerHTML = "<font color=\"green\">Strong</font>";
+}
+else if(pass.length < 6 && pass == pass.toLowerCase()) {
+document.getElementById("level").innerHTML = "<font color=\"red\">Weak</font>";
+}
+else {
+document.getElementById("level").innerHTML = "<font color=\"yellow\">Medium</font>";
+}
+}
+
+function change2()
+{
+var pass = document.getElementById("pwd1").value;
+var pass2 = document.getElementById("pwd2").value;
+if(pass!=pass2) {
+document.getElementById("match").innerHTML = "<font color=\"red\">Passwords do not match</font>";
+return false;
+}
+else if(pass.length < 4) {
+document.getElementById("match").innerHTML = "<font color=\"red\">Password is too short</font>";
+return false;
+}
+else {
+document.getElementById("match").innerHTML = "<font color=\"green\">Passwords match</font>";
+return true;
+}
+}
+
+
+</script>
+</body>
+</html>

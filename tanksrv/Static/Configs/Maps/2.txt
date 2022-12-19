@@ -1,0 +1,875 @@
+{
+  "mapParts": 16,
+  "mapPartsPerX": 2,
+  "cellsPerX": 12,
+  "cellsPerY": 48,
+  "fuelCost": 1,
+  "dangerZoneY": 30,
+  "startPosition": {
+    "x": 0,
+    "y": -1794,
+    "z": 0
+  },
+  "cells": [
+    {
+      "x": 5,
+      "y": 0,
+      "state": "Open"
+    },
+    {
+      "x": 4,
+      "y": 0,
+      "state": "AvailableForOpen"
+    },
+    {
+      "x": 6,
+      "y": 0,
+      "state": "AvailableForOpen"
+    },
+    {
+      "x": 5,
+      "y": 1,
+      "state": "AvailableForOpen"
+    },
+    {
+      "x": 0,
+      "y": 1,
+      "type": "Bonus",
+      "bonusType": "Artillery",
+      "isObjectVisible": true
+    },
+    {
+      "x": 1,
+      "y": 1,
+      "type": "Fight",
+      "tierRange": -1,
+      "isObjectVisible": false
+    },
+    {
+      "x": 9,
+      "y": 1,
+      "type": "Fight",
+      "tierRange": -1,
+      "isObjectVisible": false
+    },
+    {
+      "x": 0,
+      "y": 2,
+      "type": "Resources",
+      "tierRange": -1,
+      "isObjectVisible": false
+    },
+    {
+      "x": 7,
+      "y": 2,
+      "type": "Resources",
+      "tierRange": -1,
+      "isObjectVisible": false
+    },
+    {
+      "x": 6,
+      "y": 3,
+      "type": "Fight",
+      "tierRange": -1,
+      "isObjectVisible": false
+    },
+    {
+      "x": 9,
+      "y": 3,
+      "type": "Resources",
+      "tierRange": -1,
+      "isObjectVisible": false
+    },
+    {
+      "x": 4,
+      "y": 4,
+      "type": "Resources",
+      "tierRange": 0,
+      "isObjectVisible": false
+    },
+    {
+      "x": 10,
+      "y": 4,
+      "type": "Fight",
+      "tierRange": -1,
+      "isObjectVisible": false
+    },
+    {
+      "x": 4,
+      "y": 5,
+      "type": "Fight",
+      "tierRange": -1,
+      "isObjectVisible": false
+    },
+    {
+      "x": 11,
+      "y": 5,
+      "type": "Bonus",
+      "bonusType": "AllyPower",
+      "isObjectVisible": false
+    },
+    {
+      "x": 0,
+      "y": 7,
+      "type": "Resources",
+      "tierRange": 0,
+      "isObjectVisible": true
+    },
+    {
+      "x": 1,
+      "y": 7,
+      "type": "Fight",
+      "tierRange": -1,
+      "isObjectVisible": false
+    },
+    {
+      "x": 7,
+      "y": 7,
+      "type": "Resources",
+      "tierRange": -1,
+      "isObjectVisible": false
+    },
+    {
+      "x": 8,
+      "y": 7,
+      "type": "Resources",
+      "tierRange": 0,
+      "isObjectVisible": false
+    },
+    {
+      "x": 0,
+      "y": 8,
+      "type": "Bonus",
+      "bonusType": "RepairAll",
+      "isObjectVisible": true
+    },
+    {
+      "x": 9,
+      "y": 8,
+      "type": "Fight",
+      "tierRange": -1,
+      "isObjectVisible": false
+    },
+    {
+      "x": 10,
+      "y": 8,
+      "type": "Bonus",
+      "bonusType": "ScoutingBonus",
+      "isObjectVisible": false
+    },
+    {
+      "x": 11,
+      "y": 8,
+      "type": "Resources",
+      "tierRange": 0,
+      "isObjectVisible": false
+    },
+    {
+      "x": 2,
+      "y": 9,
+      "type": "Bonus",
+      "bonusType": "ScoutingEnemy",
+      "isObjectVisible": false
+    },
+    {
+      "x": 6,
+      "y": 9,
+      "type": "Resources",
+      "tierRange": -1,
+      "isObjectVisible": false
+    },
+    {
+      "x": 6,
+      "y": 10,
+      "type": "Resources",
+      "tierRange": 0,
+      "isObjectVisible": false
+    },
+    {
+      "x": 7,
+      "y": 10,
+      "type": "Fight",
+      "tierRange": -1,
+      "isObjectVisible": false
+    },
+    {
+      "x": 0,
+      "y": 11,
+      "type": "Fight",
+      "tierRange": 0,
+      "isObjectVisible": false
+    },
+    {
+      "x": 6,
+      "y": 11,
+      "type": "Bonus",
+      "bonusType": "Restore",
+      "isObjectVisible": false
+    },
+    {
+      "x": 9,
+      "y": 11,
+      "type": "Fight",
+      "tierRange": 0,
+      "isObjectVisible": false
+    },
+    {
+      "x": 5,
+      "y": 12,
+      "type": "Fight",
+      "tierRange": -1,
+      "isObjectVisible": false
+    },
+    {
+      "x": 6,
+      "y": 12,
+      "type": "Resources",
+      "tierRange": 0,
+      "isObjectVisible": false
+    },
+    {
+      "x": 1,
+      "y": 13,
+      "type": "Fight",
+      "tierRange": -1,
+      "isObjectVisible": false
+    },
+    {
+      "x": 6,
+      "y": 13,
+      "type": "Resources",
+      "tierRange": 0,
+      "isObjectVisible": true
+    },
+    {
+      "x": 11,
+      "y": 13,
+      "type": "Resources",
+      "tierRange": -1,
+      "isObjectVisible": false
+    },
+    {
+      "x": 2,
+      "y": 14,
+      "type": "Bonus",
+      "bonusType": "ScoutingEnemy",
+      "isObjectVisible": false
+    },
+    {
+      "x": 3,
+      "y": 14,
+      "type": "Fight",
+      "tierRange": 0,
+      "isObjectVisible": false
+    },
+    {
+      "x": 6,
+      "y": 14,
+      "type": "Resources",
+      "tierRange": -1,
+      "isObjectVisible": true
+    },
+    {
+      "x": 11,
+      "y": 14,
+      "type": "Resources",
+      "tierRange": 0,
+      "isObjectVisible": false
+    },
+    {
+      "x": 1,
+      "y": 15,
+      "type": "Bonus",
+      "bonusType": "AllyPower",
+      "isObjectVisible": false
+    },
+    {
+      "x": 6,
+      "y": 15,
+      "type": "Bonus",
+      "bonusType": "Restore",
+      "isObjectVisible": true
+    },
+    {
+      "x": 7,
+      "y": 15,
+      "type": "Fight",
+      "tierRange": 0,
+      "isObjectVisible": false
+    },
+    {
+      "x": 9,
+      "y": 15,
+      "type": "Bonus",
+      "bonusType": "ScoutingBonus",
+      "isObjectVisible": false
+    },
+    {
+      "x": 1,
+      "y": 16,
+      "type": "Fight",
+      "tierRange": 0,
+      "isObjectVisible": false
+    },
+    {
+      "x": 3,
+      "y": 16,
+      "type": "Resources",
+      "tierRange": 0,
+      "isObjectVisible": false
+    },
+    {
+      "x": 5,
+      "y": 16,
+      "type": "Resources",
+      "tierRange": 0,
+      "isObjectVisible": false
+    },
+    {
+      "x": 0,
+      "y": 17,
+      "type": "Target",
+      "tierRange": 0,
+      "isObjectVisible": false
+    },
+    {
+      "x": 10,
+      "y": 17,
+      "type": "Fight",
+      "tierRange": 0,
+      "isObjectVisible": false
+    },
+    {
+      "x": 1,
+      "y": 18,
+      "type": "Fight",
+      "tierRange": 0,
+      "isObjectVisible": false
+    },
+    {
+      "x": 5,
+      "y": 18,
+      "type": "Fight",
+      "tierRange": 0,
+      "isObjectVisible": false
+    },
+    {
+      "x": 6,
+      "y": 18,
+      "type": "Bonus",
+      "bonusType": "Artillery",
+      "isObjectVisible": false
+    },
+    {
+      "x": 8,
+      "y": 18,
+      "type": "Resources",
+      "tierRange": 0,
+      "isObjectVisible": false
+    },
+    {
+      "x": 3,
+      "y": 19,
+      "type": "Resources",
+      "tierRange": 0,
+      "isObjectVisible": false
+    },
+    {
+      "x": 11,
+      "y": 19,
+      "type": "Resources",
+      "tierRange": 0,
+      "isObjectVisible": false
+    },
+    {
+      "x": 5,
+      "y": 20,
+      "type": "Resources",
+      "tierRange": 0,
+      "isObjectVisible": false
+    },
+    {
+      "x": 7,
+      "y": 20,
+      "type": "Resources",
+      "tierRange": 0,
+      "isObjectVisible": false
+    },
+    {
+      "x": 9,
+      "y": 20,
+      "type": "Fight",
+      "tierRange": 0,
+      "isObjectVisible": false
+    },
+    {
+      "x": 1,
+      "y": 21,
+      "type": "Fight",
+      "tierRange": 0,
+      "isObjectVisible": false
+    },
+    {
+      "x": 3,
+      "y": 21,
+      "type": "Fight",
+      "tierRange": 0,
+      "isObjectVisible": false
+    },
+    {
+      "x": 10,
+      "y": 21,
+      "type": "Target",
+      "tierRange": 0,
+      "isObjectVisible": false
+    },
+    {
+      "x": 1,
+      "y": 22,
+      "type": "Bonus",
+      "bonusType": "RepairAll",
+      "isObjectVisible": false
+    },
+    {
+      "x": 6,
+      "y": 22,
+      "type": "Fight",
+      "tierRange": 0,
+      "isObjectVisible": false
+    },
+    {
+      "x": 1,
+      "y": 24,
+      "type": "Fight",
+      "tierRange": 0,
+      "isObjectVisible": false
+    },
+    {
+      "x": 3,
+      "y": 24,
+      "type": "Bonus",
+      "bonusType": "RepairAll",
+      "isObjectVisible": false
+    },
+    {
+      "x": 4,
+      "y": 24,
+      "type": "Fight",
+      "tierRange": 0,
+      "isObjectVisible": false
+    },
+    {
+      "x": 6,
+      "y": 24,
+      "type": "Resources",
+      "tierRange": -1,
+      "isObjectVisible": false
+    },
+    {
+      "x": 7,
+      "y": 24,
+      "type": "Fight",
+      "tierRange": 0,
+      "isObjectVisible": false
+    },
+    {
+      "x": 9,
+      "y": 24,
+      "type": "Bonus",
+      "bonusType": "Artillery",
+      "isObjectVisible": false
+    },
+    {
+      "x": 10,
+      "y": 24,
+      "type": "Fight",
+      "tierRange": 0,
+      "isObjectVisible": false
+    },
+    {
+      "x": 0,
+      "y": 25,
+      "type": "Resources",
+      "tierRange": 0,
+      "isObjectVisible": true
+    },
+    {
+      "x": 1,
+      "y": 25,
+      "type": "Resources",
+      "tierRange": -1,
+      "isObjectVisible": true
+    },
+    {
+      "x": 2,
+      "y": 26,
+      "type": "Bonus",
+      "bonusType": "ScoutingEnemy",
+      "isObjectVisible": false
+    },
+    {
+      "x": 4,
+      "y": 26,
+      "type": "Fight",
+      "tierRange": 0,
+      "isObjectVisible": false
+    },
+    {
+      "x": 7,
+      "y": 26,
+      "type": "Bonus",
+      "bonusType": "ScoutingBonus",
+      "isObjectVisible": false
+    },
+    {
+      "x": 10,
+      "y": 26,
+      "type": "Fight",
+      "tierRange": 0,
+      "isObjectVisible": false
+    },
+    {
+      "x": 6,
+      "y": 28,
+      "type": "Fight",
+      "tierRange": 0,
+      "isObjectVisible": false
+    },
+    {
+      "x": 8,
+      "y": 28,
+      "type": "Fight",
+      "tierRange": 0,
+      "isObjectVisible": false
+    },
+    {
+      "x": 2,
+      "y": 29,
+      "type": "Fight",
+      "tierRange": 0,
+      "isObjectVisible": false
+    },
+    {
+      "x": 10,
+      "y": 29,
+      "type": "Fight",
+      "tierRange": 0,
+      "isObjectVisible": false
+    },
+    {
+      "x": 2,
+      "y": 30,
+      "type": "Target",
+      "tierRange": 1,
+      "isObjectVisible": true
+    },
+    {
+      "x": 4,
+      "y": 30,
+      "type": "Resources",
+      "tierRange": 1,
+      "isObjectVisible": false
+    },
+    {
+      "x": 11,
+      "y": 30,
+      "type": "Resources",
+      "tierRange": 1,
+      "isObjectVisible": false
+    },
+    {
+      "x": 0,
+      "y": 31,
+      "type": "Fight",
+      "tierRange": 0,
+      "isObjectVisible": false
+    },
+    {
+      "x": 2,
+      "y": 31,
+      "type": "Bonus",
+      "bonusType": "Restore",
+      "isObjectVisible": true
+    },
+    {
+      "x": 7,
+      "y": 31,
+      "type": "Resources",
+      "tierRange": 1,
+      "isObjectVisible": false
+    },
+    {
+      "x": 8,
+      "y": 31,
+      "type": "Fight",
+      "tierRange": 1,
+      "isObjectVisible": false
+    },
+    {
+      "x": 3,
+      "y": 32,
+      "type": "Fight",
+      "tierRange": 0,
+      "isObjectVisible": false
+    },
+    {
+      "x": 1,
+      "y": 33,
+      "type": "Resources",
+      "tierRange": 1,
+      "isObjectVisible": false
+    },
+    {
+      "x": 6,
+      "y": 33,
+      "type": "Fight",
+      "tierRange": 1,
+      "isObjectVisible": false
+    },
+    {
+      "x": 11,
+      "y": 33,
+      "type": "Fight",
+      "tierRange": 0,
+      "isObjectVisible": false
+    },
+    {
+      "x": 3,
+      "y": 34,
+      "type": "Bonus",
+      "bonusType": "ScoutingBonus",
+      "isObjectVisible": false
+    },
+    {
+      "x": 6,
+      "y": 34,
+      "type": "Bonus",
+      "bonusType": "ScoutingEnemy",
+      "isObjectVisible": false
+    },
+    {
+      "x": 9,
+      "y": 34,
+      "type": "Resources",
+      "tierRange": 1,
+      "isObjectVisible": false
+    },
+    {
+      "x": 9,
+      "y": 35,
+      "type": "Resources",
+      "tierRange": 1,
+      "isObjectVisible": false
+    },
+    {
+      "x": 10,
+      "y": 35,
+      "type": "Resources",
+      "tierRange": 1,
+      "isObjectVisible": true
+    },
+    {
+      "x": 3,
+      "y": 36,
+      "type": "Fight",
+      "tierRange": 1,
+      "isObjectVisible": false
+    },
+    {
+      "x": 8,
+      "y": 36,
+      "type": "Fight",
+      "tierRange": 0,
+      "isObjectVisible": false
+    },
+    {
+      "x": 10,
+      "y": 36,
+      "type": "Bonus",
+      "bonusType": "AllyPower",
+      "isObjectVisible": true
+    },
+    {
+      "x": 11,
+      "y": 36,
+      "type": "Fight",
+      "tierRange": 1,
+      "isObjectVisible": false
+    },
+    {
+      "x": 1,
+      "y": 37,
+      "type": "Fight",
+      "tierRange": 0,
+      "isObjectVisible": false
+    },
+    {
+      "x": 11,
+      "y": 37,
+      "type": "Target",
+      "tierRange": 1,
+      "isObjectVisible": false
+    },
+    {
+      "x": 0,
+      "y": 38,
+      "type": "Resources",
+      "tierRange": 1,
+      "isObjectVisible": false
+    },
+    {
+      "x": 3,
+      "y": 38,
+      "type": "Fight",
+      "tierRange": 0,
+      "isObjectVisible": false
+    },
+    {
+      "x": 8,
+      "y": 38,
+      "type": "Fight",
+      "tierRange": 0,
+      "isObjectVisible": false
+    },
+    {
+      "x": 0,
+      "y": 39,
+      "type": "Resources",
+      "tierRange": 1,
+      "isObjectVisible": false
+    },
+    {
+      "x": 5,
+      "y": 39,
+      "type": "Fight",
+      "tierRange": 1,
+      "isObjectVisible": false
+    },
+    {
+      "x": 2,
+      "y": 40,
+      "type": "Bonus",
+      "bonusType": "AllyPower",
+      "isObjectVisible": false
+    },
+    {
+      "x": 6,
+      "y": 40,
+      "type": "Resources",
+      "tierRange": 1,
+      "isObjectVisible": false
+    },
+    {
+      "x": 7,
+      "y": 40,
+      "type": "Bonus",
+      "bonusType": "AllyPower",
+      "isObjectVisible": false
+    },
+    {
+      "x": 11,
+      "y": 40,
+      "type": "Fight",
+      "tierRange": 1,
+      "isObjectVisible": false
+    },
+    {
+      "x": 9,
+      "y": 41,
+      "type": "Fight",
+      "tierRange": 1,
+      "isObjectVisible": false
+    },
+    {
+      "x": 11,
+      "y": 41,
+      "type": "Target",
+      "tierRange": 1,
+      "isObjectVisible": false
+    },
+    {
+      "x": 1,
+      "y": 42,
+      "type": "Fight",
+      "tierRange": 1,
+      "isObjectVisible": false
+    },
+    {
+      "x": 3,
+      "y": 43,
+      "type": "Fight",
+      "tierRange": 1,
+      "isObjectVisible": false
+    },
+    {
+      "x": 0,
+      "y": 44,
+      "type": "Resources",
+      "tierRange": 1,
+      "isObjectVisible": false
+    },
+    {
+      "x": 2,
+      "y": 44,
+      "type": "Target",
+      "tierRange": 1,
+      "isObjectVisible": false
+    },
+    {
+      "x": 7,
+      "y": 44,
+      "type": "Fight",
+      "tierRange": 1,
+      "isObjectVisible": false
+    },
+    {
+      "x": 10,
+      "y": 45,
+      "type": "Fight",
+      "tierRange": 1,
+      "isObjectVisible": false
+    },
+    {
+      "x": 4,
+      "y": 46,
+      "type": "Fight",
+      "tierRange": 1,
+      "isObjectVisible": false
+    },
+    {
+      "x": 5,
+      "y": 46,
+      "type": "Resources",
+      "tierRange": 1,
+      "isObjectVisible": false
+    },
+    {
+      "x": 8,
+      "y": 46,
+      "type": "Fight",
+      "tierRange": 0,
+      "isObjectVisible": false
+    },
+    {
+      "x": 9,
+      "y": 46,
+      "type": "Resources",
+      "tierRange": 1,
+      "isObjectVisible": false
+    },
+    {
+      "x": 4,
+      "y": 47,
+      "type": "Resources",
+      "tierRange": 1,
+      "isObjectVisible": false
+    },
+    {
+      "x": 5,
+      "y": 47,
+      "type": "Resources",
+      "tierRange": 1,
+      "isObjectVisible": false
+    }
+  ]
+}

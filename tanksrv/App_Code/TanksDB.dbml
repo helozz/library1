@@ -1,0 +1,984 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="tankwars" Class="TanksDBDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=TANKSQUAD\SQLEXPRESS;Initial Catalog=tankwars;User ID=sa" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="tankwarsConnectionString1" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Defines" Member="Defines">
+    <Type Name="Defines">
+      <Column Name="n" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="s" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Golds" Member="Golds">
+    <Type Name="Golds">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="userId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="userLevel" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="item" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="itemId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="price" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="num" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="total" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="gold" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="day" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="month" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="year" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="time" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Levels" Member="Levels">
+    <Type Name="Levels">
+      <Column Name="l" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="e" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="g" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="m" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Purchases" Member="Purchases">
+    <Type Name="Purchases">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="userId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="costIOS" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="costAndroid" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="typeGold" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="goodsNum" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="goodsBonus" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="mostPopular" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="specialOffer" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="IP" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="day" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="month" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="year" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="time" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="transactionId" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="data" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="receipt" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ShellShops" Member="ShellShops">
+    <Type Name="ShellShops">
+      <Column Name="i" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="n" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="k" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="b" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="m" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="g" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="dm" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="dx" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="ao" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="r" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="t" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ut" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="z" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="s" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ic" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Slots" Member="Slots">
+    <Type Name="Slots">
+      <Column Name="n" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="m" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="g" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.UserMissions" Member="UserMissions">
+    <Type Name="UserMissions">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="mission" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="userId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="map" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="money" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="gold" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="power1" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="power1num" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="power2" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="power2num" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="power3" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="power3num" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="difficulty" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="goal" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="complete" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="userLevel" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="UnitPower" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.UserShells" Member="UserShells">
+    <Type Name="UserShells">
+      <Column Name="i" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="u" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="s" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="n" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.UserCampaigns" Member="UserCampaigns">
+    <Type Name="UserCampaigns">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="campaign" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="userID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="completedHard" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="completedMedium" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="completedEasy" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.BlindBuys" Member="BlindBuys">
+    <Type Name="BlindBuys">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="json" Type="System.String" DbType="VarChar(1000) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.UserBuildings" Member="UserBuildings">
+    <Type Name="UserBuildings">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="userId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="zone" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="type" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="blevel" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="time" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="removable" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="collectTime" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Campaigns" Member="Campaigns">
+    <Type Name="Campaigns">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="campaign" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="episode" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="episodeName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="difficulty" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="requiredLevel" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="maxUnits" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="reward1" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="reward1Num" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="reward1Item" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="reward2" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="reward2Num" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="reward2Item" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="reward3" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="reward3Num" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="reward3Item" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="UnitPower" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="storage" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="openZone" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="fuelCost" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Skills" Member="Skills">
+    <Type Name="Skills">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="skillId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="icon" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="type" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="lvl" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="param1" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="value1" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="param2" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="value2" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="param3" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="value3" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="param4" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="value4" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="param5" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="value5" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="param6" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="value6" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Shops" Member="Shops">
+    <Type Name="Shops">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="icon" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="type" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="mostPopular" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="specialOffer" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="percentage" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="price" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="specialPrice" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="useSpecial" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.UserWounds" Member="UserWounds">
+    <Type Name="UserWounds">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="userId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="crew" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="wound" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="timeStart" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="timeEnd" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="skillsDisabled" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.UserZones" Member="UserZones">
+    <Type Name="UserZones">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="userId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="zoneId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="power" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="lastLogin" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="tanks" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="powerUnit" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="blockedBefore" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Zones" Member="Zones">
+    <Type Name="Zones">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="zone" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="buildings" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="forLevel" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="forGold" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.UserNewMissionInfos" Member="UserNewMissionInfos">
+    <Type Name="UserNewMissionInfos">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="userId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="enemyId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="enemyName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="enemyClanName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="power" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="enemyLvl" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="zoneId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="money" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="prodPoints" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="resPoints" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="enemySquad" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Items" Member="Items">
+    <Type Name="Items">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="json" Type="System.String" DbType="VarChar(1000) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.UserItems" Member="UserItems">
+    <Type Name="UserItems">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="userId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="itemId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="amount" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.UserFeedbacks" Member="UserFeedbacks">
+    <Type Name="UserFeedbacks">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="userid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="userName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="stars" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="title" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="text" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="postDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="version" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.UserFriendsRewards" Member="UserFriendsRewards">
+    <Type Name="UserFriendsRewards">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="userId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="socialId" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="refId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="activity" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="lastExp" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Upgrades" Member="Upgrades">
+    <Type Name="Upgrades">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="type" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="tier" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="price" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="frontArmor" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="backArmor" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="sideArmor" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="maxHP" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="speed" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="turnSpeed" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="minAccuracy" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="maxAccuracy" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="visibilityRadius" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="range" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="aimingTime" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="reloadDuration" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="piercing" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="damage" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Buildings" Member="Buildings">
+    <Type Name="Buildings">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="typeEnum" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="bLevel" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="HQLevelReq" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="buildingPrice" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="buildingTime" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="accelerationPrice" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="storageSize" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="productionInSeconds" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Evolves" Member="Evolves">
+    <Type Name="Evolves">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="defaultUnitId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="requirements" Type="System.String" DbType="VarChar(1000) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.UserNewMissions" Member="UserNewMissions">
+    <Type Name="UserNewMissions">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="userId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="userzone" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="missionid" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="itemId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="itemCnt" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="diff" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="money" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="exp" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="parts" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MarketItems" Member="MarketItems">
+    <Type Name="MarketItems">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="hq" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="slot" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="json" Type="System.String" DbType="VarChar(750) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.RandomItems" Member="RandomItems">
+    <Type Name="RandomItems">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="json" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.NewMissions" Member="NewMissions">
+    <Type Name="NewMissions">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="fuelcost" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="type" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="map" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="power1" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="power1num" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="powermult" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="minPower" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="maxPower" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.RadarConfigs" Member="RadarConfigs">
+    <Type Name="RadarConfigs">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="minPower" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="maxPower" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="mVeasy" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="mEasy" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="mNorm" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="mHard" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="eVeasy" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="eEasy" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="eNorm" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="eHard" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="pVeasy" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="pEasy" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="pNorm" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="pHard" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="dVeasy" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="dEasy" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="dNorm" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="dHard" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="bundleId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="compMinVeasy" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="compMaxVeasy" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="compMinEasy" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="compMaxEasy" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="compMinNorm" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="compMaxNorm" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="compMinHard" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="compMaxHard" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PvPConfigs" Member="PvPConfigs">
+    <Type Name="PvPConfigs">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="minPower" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="maxPower" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="mNorm" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="eNorm" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="pNorm" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="bundleId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="compMinNorm" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="compMaxNorm" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="type" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Offers" Member="Offers">
+    <Type Name="Offers">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="icon" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="costIOS" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="costAndroid" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="typeGold" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="goodsNum" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="goodsBonus" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="mostPopular" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="specialOffer" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="active" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="mask" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SystemDefines" Member="SystemDefines">
+    <Type Name="SystemDefines">
+      <Column Name="n" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="s" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TodoObjectives" Member="TodoObjectives">
+    <Type Name="TodoObjectives">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="todoId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="points" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="count" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PowerUps" Member="PowerUps">
+    <Type Name="PowerUps">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="type" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="clas" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="activation" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="start" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="cooldown" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="workingTime" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="bombNum" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="bombIdShell" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="frontArmor" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="backArmor" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="rightArmor" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="maxHP" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="speed" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="reloadDuration" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="piercing" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="minAccuracy" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="maxAccuracy" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="visibilityRadius" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="range" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="minDamageShell" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="maxDamageShell" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="money" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="gold" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="forSale" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="bonusJSON" Type="System.String" DbType="VarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="lvl" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DefaultUnits" Member="DefaultUnits">
+    <Type Name="DefaultUnits">
+      <Column Name="i" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="n" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="s" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="rm" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="az" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ts" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="tt" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="at" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="cd" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="rd" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="cs" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="vr" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="c" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="hx" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="sp" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="ms" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="fa" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ba" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ra" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="am" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ax" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="t" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="z" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="m" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="g" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="kr" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="lm" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="rg" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="p" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="sz" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="pc" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="dg" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="lx" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="parts" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.UserMarkets" Member="UserMarkets">
+    <Type Name="UserMarkets">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="userId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="cellId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="money" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="gold" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="itemId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="count" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="type" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="sold" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Crews" Member="Crews">
+    <Type Name="Crews">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="side" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="idsidebonus" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="money" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="gold" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="skillId1" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="skillId2" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="skillId3" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="skillId4" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="skillId5" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="forSale" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="skillId1b" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="skillId1c" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="skillId2b" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="skillId2c" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="skillId4b" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="skillId4c" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="skillId5b" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="skillId5c" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="idsidebonus2" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="idsidebonus3" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SkillRequirements" Member="SkillRequirements">
+    <Type Name="SkillRequirements">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="[index]" Member="index" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[level]" Member="level" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="crewLevel" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="requirements" Type="System.String" DbType="VarChar(1000) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Mailboxes" Member="Mailboxes">
+    <Type Name="Mailboxes">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="userId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="type" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="timeCreated" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="timeDeleted" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="details" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="message" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="rewards" Type="System.String" DbType="VarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="isRead" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="topic" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="sender" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Mailboxes" Member="Mailboxes1">
+    <Type Name="Mailbox">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="userId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="type" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="timeCreated" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="timeDeleted" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="details" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="message" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="rewards" Type="System.String" DbType="VarChar(250) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.UserTournaments" Member="UserTournaments">
+    <Type Name="UserTournaments">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="clanId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="points" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="updateTime" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.UserCrews" Member="UserCrews">
+    <Type Name="UserCrews">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="userid" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="crewid" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="lvl" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="exp" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="tier" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="skillid1" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="skillid2" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="skillid3" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="skillid4" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="skillid5" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="skill1lvl" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="skill2lvl" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="skill3lvl" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="skill4lvl" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="skill5lvl" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="side" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="idsidebonus" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="skill6lvl" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="isShared" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ClanLevels" Member="ClanLevels">
+    <Type Name="ClanLevels">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="[level]" Member="level" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="experience" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="place" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ClanSkillLevels" Member="ClanSkillLevels">
+    <Type Name="ClanSkillLevels">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="[index]" Member="index" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[level]" Member="level" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="clanLevel" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="money" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Clans" Member="Clans">
+    <Type Name="Clans">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="flag" Type="System.String" DbType="Char(10) NOT NULL" CanBeNull="false" />
+      <Column Name="treasury" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="tax" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="places" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="join_price" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="skill1" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="skill2" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="skill3" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="skill4" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="skill5" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="skill6" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="skill7" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="logo" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="statement" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="[level]" Member="level" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.UserMissionEvents" Member="UserMissionEvents">
+    <Type Name="UserMissionEvents">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="userId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="eventId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="startTime" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="userTier" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="userPower" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="squadData" Type="System.String" DbType="VarChar(5000) NOT NULL" CanBeNull="false" />
+      <Column Name="fightMissions" Type="System.String" DbType="VarChar(1000) NOT NULL" CanBeNull="false" />
+      <Column Name="targetMissions" Type="System.String" DbType="VarChar(1000) NOT NULL" CanBeNull="false" />
+      <Column Name="lastCellIndex" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="bonus" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.UserEventMapStates" Member="UserEventMapStates">
+    <Type Name="UserEventMapStates">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="userId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="eventId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="state" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="bonus" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[index]" Member="index" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MissionEvents" Member="MissionEvents">
+    <Type Name="MissionEvents">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="eventId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="minPower" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="maxPower" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="money" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="experience" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="parts" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="rewards" Type="System.String" DbType="VarChar(1000) NOT NULL" CanBeNull="false" />
+      <Column Name="tier" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.States" Member="States">
+    <Type Name="States">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="eventStartTime" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="eventMapIndex" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Users" Member="Users">
+    <Type Name="Users">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="BundleId" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Photo" Type="System.String" DbType="VarChar(300)" CanBeNull="true" />
+      <Column Name="SocialID" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="FBLink" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="TWLink" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="AuthKey" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Rating" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="UserLevel" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Gold" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="Money" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="Locale" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="t" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="d" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Experience" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Victories" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Defeats" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Draws" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="al" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Slots" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Flags" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="y" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="MissionID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Device" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="TestGroup" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PowerSlots" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="clan_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="clan_position" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="RegisterTime" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="Tier" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ProductionPoints" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PushToken" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="zones1" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="zones2" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="RNDTank" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="LimitDetails" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="LimitMoney" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="LimitFuel" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="upgradeTime" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="ScanAttempt" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="lastLogin" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="blindBuyAttempts" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="synPVP" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ScanTime" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="battleSquad" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="battlesScan" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="battlesLastScan" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="battlesCount" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="battlesLastTime" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="battleTime" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="battleDailyRewardTime" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="battleBestLvlReward" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="battleBestReward" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="marketTime" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="tutorialState" Type="System.String" DbType="VarChar(1000) NOT NULL" CanBeNull="false" />
+      <Column Name="marketBuyAttempts" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="todoState" Type="System.String" DbType="VarChar(1000) NOT NULL" CanBeNull="false" />
+      <Column Name="todoReward" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="gameTime" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="BanEndTime" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="clanSkill1" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="clanSkill2" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="clanSkill3" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="clanSkill4" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="clanSkill5" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="clanSkill6" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="clanSkill7" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="dailyRewardTime" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="dailyRewardIndex" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="eventReputation" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="LimitEventFuel" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="VIPgold" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="VIPsubscription" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="EventFuelRestoreAttempt" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="eventReward" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.UserTechTrees" Member="UserTechTrees">
+    <Type Name="UserTechTrees">
+      <Column Name="userId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="unitId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="state" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="time" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.UserResearches" Member="UserResearches">
+    <Type Name="UserResearches">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="userId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="unitId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="upgradeId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="time" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.UserTournamentBattles" Member="UserTournamentBattles">
+    <Type Name="UserTournamentBattles">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="userId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="clanId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="roomId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="points" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="win" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="time" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.UpgradesNew" Member="UpgradesNew">
+    <Type Name="UpgradesNew">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="tankType" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="tankTier" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="upgrade1" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="value1" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="upgrade2" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="value2" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="upgrade3" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="value3" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="upgrade4" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="value4" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="upgrade5" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="value5" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="upgrade6" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="value6" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="upgrade7" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="value7" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="upgrade8" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="value8" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="upgrade9" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="value9" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="upgrade10" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="value10" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="upgrade11" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="value11" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="upgrade12" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="value12" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="components" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="money" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="parts" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="goldPerMinute" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.UserUnits" Member="UserUnits">
+    <Type Name="UserUnits">
+      <Column Name="i" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="u" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="t" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="h" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="td" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="sn" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="st" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="en" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="et" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="rd" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="rr" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="upgrades" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="frontArmor" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="backArmor" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="sideArmor" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="maxHP" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="speed" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="turnSpeed" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="minAccuracy" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="maxAccuracy" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="visibilityRadius" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="range" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="aimingTime" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="reloadDuration" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="piercing" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="damage" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="mask" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="inZone" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="power" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="sharingClanUnit" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="sharingUser" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="sharingTime" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="sharingData" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="setUpgrades" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Actions" Member="Actions">
+    <Type Name="Actions">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="uniqueId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="offerType" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="startTrigger" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="endTrigger" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="levelTrigger" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="duration" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="itemType" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="itemId" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="amount" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="bonus" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="discount" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="priority" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="item" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="shopType" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="isPurchase" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="counter" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="HQLevel" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="price" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.UserActions" Member="UserActions">
+    <Type Name="UserActions">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="userId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="actionUnique" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="startTime" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="endTime" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="itemType" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="itemId" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="amount" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="discount" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="bonus" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="priority" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="item" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="shopType" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="isPurchase" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="counter" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="price" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="HQLevel" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="offerType" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.UserBattles" Member="UserBattles">
+    <Type Name="UserBattles">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="userId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="isBot" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="place" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="prevBestPlace" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="bestPlace" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="squadPower" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="attackBonus" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="defenseBonus" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="rating" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="place0" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Battles" Member="Battles">
+    <Type Name="Battles">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="league" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="fromPlace" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="toPlace" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="percentage" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="dailyRewards" Type="System.String" DbType="VarChar(1000) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.UserBattleLogs" Member="UserBattleLogs">
+    <Type Name="UserBattleLogs">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="userid" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="enemyid" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="enemylvl" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="enemyname" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="enemyclan" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="enemysqpower" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="enemysquad" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="type" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="timestamp" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="win" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="logtype" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="viewed" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="deltaRating" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="enemyClanIcon" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CrewLevels" Member="CrewLevels">
+    <Type Name="CrewLevels">
+      <Column Name="l" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="e" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+</Database>

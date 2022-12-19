@@ -1,0 +1,126 @@
+{
+  "encounterMissions": [
+    1528,
+    1529
+  ],
+  "encounters": [
+    {
+      "id": 1,
+      "imageKey": "imgKey1",
+      "objectiveKey": "objectiveKey1",
+      "actions": [
+        {
+          "actionKey": "key1.1",
+          "nextEncounterId": 2,
+          "actionHandlers": []
+        },
+        {
+          "actionKey": "key1.2",
+          "nextEncounterId": 2,
+          "actionHandlers": []
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "imageKey": "imgKey2",
+      "objectiveKey": "objectiveKe2",
+      "actions": [
+        {
+          "actionKey": "key2.1",
+          "nextEncounterId": 3,
+          "actionHandlers": []
+        },
+        {
+          "actionKey": "key2.2",
+          "nextEncounterId": 3,
+          "actionHandlers": []
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "imageKey": "imgKey3",
+      "objectiveKey": "objectiveKe3",
+      "actions": [
+        {
+          "actionKey": "key3.1",
+          "actionHandlers": [
+            {
+              "name": "ResourcesEncounterHandler",
+              "args": "1,5,-100,50,21,1"
+            },
+            {
+              "name": "AddBonusEncounterHandler",
+              "args": "ScoutingBonus,1"
+            },
+            {
+              "name": "HealRandomSquadEncounterHandler"
+            },
+            {
+              "name": "DamageRandomSquadEncounterHandler",
+              "args": 10
+            },
+            {
+              "name": "ScoutEnemyBonusEncounterHandler"
+            }
+          ]
+        },
+        {
+          "actionKey": "key3.2",
+          "actionHandlers": [
+            {
+              "name": "ResourcesEncounterHandler",
+              "args": "1,5,-100,50,21,1"
+            },
+            {
+              "name": "AddBonusEncounterHandler",
+              "args": "ScoutingBonus,1"
+            },
+            {
+              "name": "HealRandomSquadEncounterHandler"
+            },
+            {
+              "name": "DamageRandomSquadEncounterHandler",
+              "args": 10
+            },
+            {
+              "name": "ScoutEnemyBonusEncounterHandler"
+            },
+            {
+              "name": "StartBattleEncounterHandler",
+              "args": "1528,1529"
+            }
+          ]
+        },
+        {
+          "actionKey": "key3.3",
+          "actionHandlers": [
+            {
+              "name": "ResourcesEncounterHandler",
+              "args": "1,5,-100,50,21,1"
+            },
+            {
+              "name": "AddBonusEncounterHandler",
+              "args": "ScoutingBonus,1"
+            },
+            {
+              "name": "HealRandomSquadEncounterHandler"
+            },
+            {
+              "name": "DamageRandomSquadEncounterHandler",
+              "args": 10
+            },
+            {
+              "name": "ScoutEnemyBonusEncounterHandler"
+            },
+            {
+              "name": "StartBattleEncounterHandler",
+              "args": "1528,1529"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+using System; 
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Globalization;
+
+namespace TW
+{
+    // NOTE: Adding anything here should also:
+    // 1) init (settings[Def.n] = {n}) for s.ashx able creating Static.txt
+    // 2) reflect enum change to the client
+    // 3) add the corresponding n field to the data base
+    
+
+public static class SystemDefine
+{
+//=========== server options
+public static Int32 StaticVersion ={StaticVersion};
+public static String ClientVersion ="{ClientVersion}";
+public static String RegTemplate = "{RegTemplate}";
+public static String PwdTemplate = "{PwdTemplate}";
+public static String PwdRetrieve = "{PwdRetrieve}";
+public static String EMail = "{EMail}";
+public static String EMailSender = "{EMailSender}";
+public static String EMailPwd = "{EMailPwd}";
+public static String EMailHost = "{EMailHost}";
+public static Int32 EMailPort = {EMailPort};
+public static bool EMailSSL = {EMailSSL};
+public static bool Maintenance = {Maintenance};
+public static bool ShutDown = {ShutDown};
+public static string BundleId = "{BundleId}";
+//=========== auth options
+public static String Platform = "{Platform}";
+public static String SecretKey = "{SecretKey}";
+public static String Sign = "{Sign}";
+public static String RSign = "{RSign}";
+public static String AppId = "{AppId}";
+public static String LocaleFolder = "{LocaleFolder}";
+public static String LocaleFolderL = "{LocaleFolderL}";
+//=========== game options
+public static bool Sandbox = {Sandbox};
+
+
+}
+}

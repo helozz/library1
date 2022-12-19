@@ -1,0 +1,25 @@
+# binaries
+[Oo]bj/
+
+# project files
+.idea/
+/*.csproj
+/*.sln
+/*.suo
+/*.user
+/*.iml
+
+# special project files
+web.config
+App_Code/Define.cs
+App_Code/SystemDefine.cs
+App_Code/TanksDB.dbml.layout
+App_Code/TanksDB*.designer.cs
+RoomKillerSource/RoomKiller/Tanks1.designer.cs
+
+
+# misc files
+Static/*.txt
+Static/*.crc
+Static/dev/
+Static/*.log

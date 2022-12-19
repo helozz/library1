@@ -1,0 +1,1 @@
+INSERT INTO BlindBuys(json) VALUES ('{"ident":"hidden_2_tier_tank","tier":2,"money":0,"gold":0,"mask":0,"items":[{"tank":23,"weight":1,"upgrades":[]}]}');

@@ -1,0 +1,42 @@
+use [tankwars]
+
+
+/****** Object:  Table [dbo].[MarketItems]    Script Date: 14.08.2015 13:03:27 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[MarketItems](
+	[id] [int] IDENTITY(1,1) NOT NULL,
+	[json] [varchar](250) NOT NULL,
+ CONSTRAINT [PK_MarketItems] PRIMARY KEY CLUSTERED 
+(
+	[id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+SET ANSI_PADDING OFF
+GO
+/****** Object:  Table [dbo].[UserMarkets]    Script Date: 14.08.2015 13:03:27 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[UserMarkets](
+	[id] [int] IDENTITY(1,1) NOT NULL,
+	[userId] [int] NOT NULL,
+	[cellId] [int] NOT NULL,
+	[money] [int] NOT NULL,
+	[gold] [int] NOT NULL,
+	[itemId] [int] NOT NULL,
+	[count] [int] NOT NULL,
+ CONSTRAINT [PK_UserMarkets] PRIMARY KEY CLUSTERED 
+(
+	[id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
