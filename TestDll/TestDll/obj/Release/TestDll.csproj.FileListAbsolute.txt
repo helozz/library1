@@ -1,0 +1,14 @@
+D:\Mine\TestDll\TestDll\bin\Release\TestDll.exe
+D:\Mine\TestDll\TestDll\bin\Release\TestDll.pdb
+D:\Mine\TestDll\TestDll\bin\Release\Calculating.dll
+D:\Mine\TestDll\TestDll\bin\Release\Calculating.pdb
+D:\Mine\TestDll\TestDll\obj\Release\TestDll.csprojResolveAssemblyReference.cache
+D:\Mine\TestDll\TestDll\obj\Release\MainWindow.baml
+D:\Mine\TestDll\TestDll\obj\Release\MainWindow.g.cs
+D:\Mine\TestDll\TestDll\obj\Release\App.g.cs
+D:\Mine\TestDll\TestDll\obj\Release\TestDll_MarkupCompile.cache
+D:\Mine\TestDll\TestDll\obj\Release\TestDll.g.resources
+D:\Mine\TestDll\TestDll\obj\Release\TestDll.Properties.Resources.resources
+D:\Mine\TestDll\TestDll\obj\Release\TestDll.csproj.GenerateResource.Cache
+D:\Mine\TestDll\TestDll\obj\Release\TestDll.exe
+D:\Mine\TestDll\TestDll\obj\Release\TestDll.pdb

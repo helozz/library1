@@ -1,0 +1,4 @@
+D:\Mine\TestDll\Calculating\bin\Debug\Calculating.dll
+D:\Mine\TestDll\Calculating\bin\Debug\Calculating.pdb
+D:\Mine\TestDll\Calculating\obj\Debug\Calculating.dll
+D:\Mine\TestDll\Calculating\obj\Debug\Calculating.pdb

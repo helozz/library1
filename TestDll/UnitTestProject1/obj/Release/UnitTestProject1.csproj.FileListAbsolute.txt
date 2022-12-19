@@ -1,0 +1,9 @@
+D:\Mine\TestDll\UnitTestProject1\bin\Release\UnitTestProject1.dll
+D:\Mine\TestDll\UnitTestProject1\bin\Release\UnitTestProject1.pdb
+D:\Mine\TestDll\UnitTestProject1\obj\Release\UnitTestProject1.csprojResolveAssemblyReference.cache
+D:\Mine\TestDll\UnitTestProject1\obj\Release\UnitTestProject1.dll
+D:\Mine\TestDll\UnitTestProject1\obj\Release\UnitTestProject1.pdb
+D:\Mine\TestDll\UnitTestProject1\bin\Release\Calculating.dll
+D:\Mine\TestDll\UnitTestProject1\bin\Release\Calculating.pdb
+D:\Mine\TestDll\UnitTestProject1\bin\Release\nunit.framework.dll
+D:\Mine\TestDll\UnitTestProject1\bin\Release\nunit.framework.xml
