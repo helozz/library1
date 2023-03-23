@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="WiFiScanTasks" Class="WiFiScanTasksDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=OCTO\TANKSERVER;Initial Catalog=WiFiScanTasks;Persist Security Info=True;User ID=sa" SettingsObjectName="WiFiHandler.Properties.Settings" SettingsPropertyName="WiFiScanTasksConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Tries" Member="Tries">
+    <Type Name="Tries">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="sid" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="pass" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="correct" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="isdone" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Sessions" Member="Sessions">
+    <Type Name="Sessions">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ssid" Type="System.String" DbType="VarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="signal" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ssKey" Type="System.String" DbType="VarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="allLines" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="doneLines" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+</Database>

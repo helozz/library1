@@ -1,0 +1,26 @@
+{
+
+  "manifest_version": 2,
+  "name": "saver",
+  "version": "1.0",
+
+  "description": "Saves parsed pages data to a download directory",
+  "icons": {
+    "48": "icons/saver.png"
+  },
+
+  "applications": {
+    "gecko": {
+      "id": "saver@mozilla.org",
+      "strict_min_version": "45.0"
+    }
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["https://www.predskazanie.ru/ekat.shtml"],
+      "js": ["saver.js"]
+    }
+  ]
+
+}
