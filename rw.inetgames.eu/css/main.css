@@ -1,0 +1,57 @@
+@charset "Windows-1251";
+/* CSS Document */
+
+body {margin:20; background-image: url(../../img/bg.gif); 
+ font-family:Verdana, Geneva, sans-serif; color:#ffffff;}
+
+a {color:#fc6401; text-decoration:none;}
+a:hover {color:#fc6401; text-decoration:underline;}
+
+.normal_text{font-size: 10px; margin: 20px;}
+
+table.menuitem .l {background:url(../../img/mitem1.gif) left center no-repeat; width:10px; height:42px;}
+table.menuitem .t{background:url(../../img/mitem2.gif) center no-repeat; height:42px;text-align:center;padding-bottom:2px;}
+table.menuitem .t a {color:#fefeff;text-decoration:none;font-weight:bold;font-family:Tahoma;}
+table.menuitem .t a:hover {color:#f0f22d;}
+table.menuitem .r{background:url(../../img/mitem3.gif) right center no-repeat; width:11px; height:42px;}
+
+#topmenu {position:relative;top:10px;}
+
+.frame {background:url(../../img/bg.gif) }
+.frame .header {height:87px; background:url(../img/hbg.gif) repeat-x;}
+.frame .header .hleft {height:87px; width:109px; background:url(../img/hl.gif) no-repeat; float:left; position:relative;}
+.frame .header .hleft .but1 {position:absolute; top:45px; left:7px; display:block; width:91px; height:27px; background:url(../img/but1.gif) no-repeat;}
+
+.frame .header .hright {height:87px; width:109px; background:url(../img/hr.gif) no-repeat; float:right; position:relative;}
+.frame .header .hright .but2 {position:absolute; top:45px; right:7px; display:block; width:77px; height:26px; background:url(../img/but2.gif) no-repeat;}
+
+.frame .header .hmain {text-align:center;height:87px; background-position:center; background-repeat:no-repeat; background-image:url(../img/none.png);}
+.frame .header .hmainfull {text-align:center;height:87px; background-position:center; background-repeat:no-repeat; background-image:url(../img/nonefull.png);}
+.frame .header .hmainfull  div{text-align:center;font-color:#fefefe;font-family:Tahoma;padding-top:30px; font-size:18px;}
+.frame .header .win { background-image:url(../img/win.png);}
+.frame .header .fail { background-image:url(../img/fail.png);}
+.frame .header .equal { background-image:url(../img/equal.png);}
+
+
+.frame .footer {height:70px; background:url(../img/fbg.gif) repeat-x;}
+.frame .footer .fleft {height:70px; width:57px; background:url(../img/fl.gif) no-repeat; float:left; position:relative;}
+.frame .footer .fright {height:70px; width:57px; background:url(../img/fr.gif) no-repeat; float:right; position:relative;}
+
+.frame .mainarea {background: url(../img/ml.gif) left repeat-y;}
+.frame .mainarea .content{background: url(../img/mr.gif) right repeat-y;}
+
+.block table td {width:25%;}
+.block .title {color:#df7209; margin:4px;}
+
+
+.red-state-0 { background: url(../../img/alertm/r0.png); height:25px; width:25px;}
+.red-state-1 { background: url(../../img/alertm/r1.png); height:25px; width:25px;}
+.red-state-2 { background: url(../../img/alertm/r2.png); height:25px; width:25px;}
+
+.ora-state-0 { background: transparent url(../../img/alertm/b0.png); height:25px; width:25px;}
+.ora-state-1 { background: transparent url(../../img/alertm/b1.png); height:25px; width:25px;}
+.ora-state-2 { background: transparent url(../../img/alertm/b2.png); height:25px; width:25px;}
+
+.blu-state-0 { background: transparent url(../../img/alertm/b0.png); height:25px; width:25px;}
+.blu-state-1 { background: transparent url(../../img/alertm/b1.png); height:25px; width:25px;}
+.blu-state-2 { background: transparent url(../../img/alertm/b2.png); height:25px; width:25px;}

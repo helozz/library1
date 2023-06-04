@@ -1,0 +1,82 @@
+ul.container ul{padding:0;margin:0;}
+
+ul.container{
+/*position:absolute;
+top:10px;
+left:3px;
+z-index:101;*/
+}
+
+ul.container li{
+	list-style:none;
+	text-align:left;
+}
+
+ul.container li.menu{
+	/* The main list elements */
+	padding:2px 0;
+	width:250px;
+}
+
+ul.container li.button a{
+	/* The section titles */
+	display:block;
+	font-family:Arial,Helvetica,sans-serif;
+	font-size:12px;
+	height:28px;
+	overflow:hidden;
+	padding-top:2px;
+	position:relative;
+	width:250px;
+	background:#222;
+	border:1px solid black;
+	margin:2px;
+}
+
+
+
+
+
+ul.container li.button a:hover{
+	/* Removing the inherited underline from the titles */
+	text-decoration:none;
+}
+
+ul.container li.button a{color:#436800;}
+
+ul.container  .dropdown{
+	/* The expandable lists */
+	display:none;
+	padding-top:2px;
+	width:100%;
+}
+
+ul.container  .dropdown li{
+	/* Each element in the expandable list */
+	background-color:#373128;
+	border:1px solid #40392C;
+	color:#CCCCCC;
+	margin:3px;
+	padding:2px;
+}
+
+ul.container  a.vk {
+display:block;
+width:12px;
+height:12px;
+float:right;
+margin:1px;
+}
+
+
+
+
+ul.container  .dropdown li.preactive{
+	background-color:#474238;
+	border:1px solid #706060;
+}
+
+ul.container  .dropdown li.prechecked{
+	background-color:#454538;
+	border:1px solid #706060;
+}
