@@ -1,0 +1,123 @@
+var httphost='rw.inetgames.eu';
+function unitName($utype)
+{
+switch ($utype)
+{
+ase 1: return 'Пехотинец'; break;
+case 2: return 'Киберпёс'; break;
+case 3: return 'Гладиатор'; break;
+case 4: return 'Валькирия'; break;
+case 5: return 'Боевая машина'; break;
+case 6: return 'Ударный танк'; break;
+case 7: return 'Бронетранспортёр'; break;
+case 8: return 'Осадный танк'; break;
+case 9: return 'Пушка Гаусса'; break;
+case 10: return 'Термомодуль'; break;
+case 11: return 'Мортира'; break;
+case 12: return 'Расщепитель'; break;
+case 13: return 'Разведчик'; break;
+case 14: return 'Перехватчик'; break;
+case 15: return 'Штурмовик'; break;
+case 16: return 'Крейсер'; break;
+case 59: return 'Разведчик «Фантом»'; break;
+case 62: return 'Орбитальная пушка'; break;
+case 9000: return 'Разведчик «Кошмар»'; break;
+case 9003: return 'Песчаный червь'; break;
+case 17: return 'Элитный пехотинец'; break;
+case 18: return 'Элитный киберпёс'; break;
+case 19: return 'Элитный гладиатор'; break;
+case 20: return 'Элитная валькирия'; break;
+case 21: return 'Элитная боевая машина'; break;
+case 22: return 'Элитный ударный танк'; break;
+case 23: return 'Элитный бронетранспортёр'; break;
+case 24: return 'Элитный осадный танк'; break;
+case 25: return 'Элитная пушка Гаусса'; break;
+case 26: return 'Элитный термомодуль'; break;
+case 27: return 'Элитная мортира'; break;
+case 28: return 'Элитный расщепитель'; break;
+case 29: return 'Элитный разведчик'; break;
+case 30: return 'Элитный перехватчик'; break;
+case 31: return 'Элитный штурмовик'; break;
+case 32: return 'Элитный крейсер'; break;
+case 60: return 'Элитный разведчик «Фантом»'; break;
+case 63: return 'Элитная орбитальная пушка'; break;
+case 9001: return 'Элитный разведчик «Кошмар»'; break;
+case 9004: return 'Элитный песчаный червь'; break;
+case 33: return 'Киборг'; break;
+case 53: return 'Пожиратель'; break;
+case 54: return 'Потрошитель'; break;
+case 55: return 'Живоглот'; break;
+case 56: return 'Тварь'; break;
+case 57: return 'Сталкер'; break;
+case 58: return 'Мозгоед'; break;
+case 34: return 'PD-13 "Кукарача"'; break;
+case 36: return 'PD-8 "Стройбот"'; break;
+case 35: return 'PD-72 "Атлант"'; break;
+case 88: return 'Десантный хелиджет "Гиперион"'; break;
+case 89: return 'Самоходная пушка "Эрида"'; break;
+case 90: return 'Тяжёлый танк "Хронос"'; break;
+case 37: return 'Снайпер'; break;
+case 38: return 'Пулемётчик'; break;
+case 39: return 'Пиротехник'; break;
+case 40: return 'Ракетчик'; break;
+case 41: return 'Элитный снайпер'; break;
+case 42: return 'Элитный пулемётчик'; break;
+case 43: return 'Элитный пиротехник'; break;
+case 44: return 'Элитный ракетчик'; break;
+case 45: return 'Ликвидатор'; break;
+case 46: return 'Протектор'; break;
+case 47: return 'Каратель'; break;
+case 48: return 'Истребитель'; break;
+case 49: return 'Элитный Ликвидатор'; break;
+case 50: return 'Элитный Протектор'; break;
+case 51: return 'Элитный каратель'; break;
+case 52: return 'Элитный истребитель'; break;
+case 64: return 'Пехотинец (мутант)'; break;
+case 65: return 'Киберпёс (мутант)'; break;
+case 66: return 'Гладиатор (мутант)'; break;
+case 67: return 'Валькирия (мутант)'; break;
+case 68: return 'Боевая машина (мутант)'; break;
+case 69: return 'Ударный танк (мутант)'; break;
+case 70: return 'Бронетранспортёр (мутант)'; break;
+case 71: return 'Осадный танк (мутант)'; break;
+case 72: return 'Пушка Гаусса (мутант)'; break;
+case 73: return 'Термомодуль (мутант)'; break;
+case 74: return 'Мортира (мутант)'; break;
+case 75: return 'Расщепитель (мутант)'; break;
+case 76: return 'Разведчик (мутант)'; break;
+case 77: return 'Перехватчик (мутант)'; break;
+case 78: return 'Штурмовик (мутант)'; break;
+case 79: return 'Крейсер (мутант)'; break;
+case 61: return 'Разведчик «Фантом» (мутант)'; break;
+case 99: return 'Орбитальная пушка (мутант)'; break;
+case 9002: return 'Разведчик «Кошмар» (мутант)'; break;
+case 80: return 'Снайпер (мутант)'; break;
+case 81: return 'Пулемётчик (мутант)'; break;
+case 82: return 'Пиротехник (мутант)'; break;
+case 83: return 'Ракетчик (мутант)'; break;
+case 84: return 'Ликвидатор (мутант)'; break;
+case 85: return 'Протектор (мутант)'; break;
+case 86: return 'Каратель (мутант)'; break;
+case 87: return 'Истребитель (мутант)'; break;
+case 91: return 'Хищник'; break;
+case 92: return 'Чистильщик'; break;
+case 94: return 'Генератор поля'; break;
+case 93: return 'Флагман'; break;
+case 95: return 'Центурион'; break;
+case 96: return 'Мастодонт'; break;
+case 97: return 'Голиаф'; break;
+case 98: return 'Авианосец'; break;
+default: return 'Название не установлено';
+}
+}
+
+function unitImg($utype)
+{
+	if($utype<10) $uim='0'+$utype+'_ps';
+	if($utype>=10 && $utype<=16)  $uim=$utype+'_ps';
+	if($utype>16 && $utype-16<10)  $uim='0'+($utype-16)+'_g_ps';
+	if($utype-16>=10)  $uim=($utype-16)+'_g_ps';
+	if($utype==33) $uim='33_ps';
+return '<img src="../img/units/'+$uim+'.jpg" title="'+unitName($utype)+'" alt="'+unitName($utype)+'" width="45" height="39" />';
+}
+
