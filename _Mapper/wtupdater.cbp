@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="wtupdater" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option platforms="Unix;" />
+				<Option output="bin/Debug/wtupdater" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+				<Linker>
+					<Add library="/usr/lib/i386-linux-gnu/libmysqlclient.so.18.0.0" />
+					<Add library="/usr/lib/i386-linux-gnu/libcurl.so.4.2.0" />
+					<Add library="/usr/lib/i386-linux-gnu/libssl3.so.1d" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/wtupdater" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Linker>
+					<Add library="/usr/lib/i386-linux-gnu/libmysqlclient.so.18.0.0" />
+					<Add library="/usr/lib/i386-linux-gnu/libcurl.so.4.2.0" />
+					<Add library="/usr/lib/i386-linux-gnu/libssl3.so.1d" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+		</Compiler>
+		<Unit filename="defines.cpp" />
+		<Unit filename="include/TDdata.h" />
+		<Unit filename="include/game.h" />
+		<Unit filename="include/tstacc.h" />
+		<Unit filename="include/wtdbcpp.h" />
+		<Unit filename="json/autolink.h" />
+		<Unit filename="json/config.h" />
+		<Unit filename="json/features.h" />
+		<Unit filename="json/forwards.h" />
+		<Unit filename="json/json.h" />
+		<Unit filename="json/reader.h" />
+		<Unit filename="json/value.h" />
+		<Unit filename="json/writer.h" />
+		<Unit filename="lib_json/json_batchallocator.h" />
+		<Unit filename="lib_json/json_internalarray.inl" />
+		<Unit filename="lib_json/json_internalmap.inl" />
+		<Unit filename="lib_json/json_reader.cpp" />
+		<Unit filename="lib_json/json_value.cpp" />
+		<Unit filename="lib_json/json_valueiterator.inl" />
+		<Unit filename="lib_json/json_writer.cpp" />
+		<Unit filename="lib_json/sconscript" />
+		<Unit filename="main.cpp" />
+		<Unit filename="src/TDdata.cpp" />
+		<Unit filename="src/game.cpp" />
+		<Unit filename="src/tstacc.cpp" />
+		<Unit filename="src/wtdbcpp.cpp" />
+		<Extensions>
+			<code_completion />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
